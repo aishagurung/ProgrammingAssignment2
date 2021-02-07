@@ -20,7 +20,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
   inv<-x$getInverse()
-  if(is.null(inv)){
+  if(!is.null(inv)){
     message("Please wait while we retreive your cached data")
     return(inv)
   }
